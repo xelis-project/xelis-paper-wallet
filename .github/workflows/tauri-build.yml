@@ -1,0 +1,109 @@
+name: Tauri Build
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: linux
+            platform: ubuntu-22.04
+            artifactPattern: linux-[arch]-[bundle]
+            setupLinuxDeps: true
+            args: ''
+          - name: macos-arm
+            platform: macos-latest
+            artifactPattern: macos-arm-[arch]-[bundle]
+            setupLinuxDeps: false
+            args: '--target aarch64-apple-darwin'
+          - name: macos-intel
+            platform: macos-latest
+            artifactPattern: macos-intel-[arch]-[bundle]
+            setupLinuxDeps: false
+            args: '--target x86_64-apple-darwin'
+          - name: windows
+            platform: windows-latest
+            artifactPattern: windows-[arch]-[bundle]
+            setupLinuxDeps: false
+            args: ''
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            src-tauri
+            xelis-paper-wallet
+
+      - name: Install Linux dependencies
+        if: ${{ matrix.setupLinuxDeps }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libgtk-3-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            patchelf
+
+      - name: Install MacOS Intel target
+        if: ${{ matrix.name == 'macos-intel' }}
+        run: |
+          rustup target add x86_64-apple-darwin
+
+      - name: Build WASM assets
+        shell: bash
+        run: |
+          cargo install wasm-pack --locked
+          pushd xelis-paper-wallet
+          wasm-pack build --no-typescript --target no-modules --release
+          popd
+          cp xelis-paper-wallet/pkg/xelis_paper_wallet_bg.wasm public/
+          cp xelis-paper-wallet/pkg/xelis_paper_wallet.js public/
+
+      - name: Build Tauri bundles
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        uses: tauri-apps/tauri-action@v0.6.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: src-tauri
+          retryAttempts: 3
+          uploadWorkflowArtifacts: true
+          workflowArtifactNamePattern: ${{ matrix.artifactPattern }}
+
+      - name: Build and upload release bundles
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: tauri-apps/tauri-action@v0.6.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: src-tauri
+          retryAttempts: 3
+          tagName: ${{ github.ref_name }}
+          releaseName: ${{ github.ref_name }}
+          releaseDraft: true
+          generateReleaseNotes: true
+          uploadWorkflowArtifacts: true
+          workflowArtifactNamePattern: ${{ matrix.artifactPattern }}
+          args: ${{ matrix.args }}
