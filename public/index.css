@@ -1,14 +1,4 @@
 @font-face {
-  font-family: "Helios";
-  src: url("/fonts/HeliosExtC_Regular.otf");
-}
-
-@font-face {
-  font-family: "Helios Bold";
-  src: url("/fonts/HeliosExtC_Bold.otf");
-}
-
-@font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff2");
 }
@@ -127,7 +117,7 @@ body {
 /* Wallet paper */
 .wallet-paper {
   padding: 0 1rem;
-  font-family: "Helios";
+  font-family: "Inter", "Noto Sans", "DejaVu Sans", "Arial Unicode MS", sans-serif;
 }
 
 @media screen and (min-width: 900px) {
