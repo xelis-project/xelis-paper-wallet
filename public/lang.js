@@ -39,6 +39,26 @@ const data = {
     "Change wallet background paper.": "Changer le papier d'arrière-plan du portefeuille.",
     "Print the wallet paper.": "Imprimer le papier du portefeuille."
   },
+  "Bahasa Indonesia": {
+    "ADDRESS": "Alamat",
+    "PRIVATE KEY": "Kunci Pribadi",
+    "Mainnet": "Mainnet",
+    "Testnet": "Testnet",
+    "Generate": "Hasilkan",
+    "Amount": "Jumlah",
+    "Print": "Cetak",
+    "XELIS Paper Wallet": "Dompet Kertas XELIS",
+    "Address": "Alamat",
+    "Private Key": "Kunci Pribadi",
+    "Seed": "Benih",
+    "Background": "Latar Belakang",
+    "Choose seed language.": "Pilih bahasa benih.",
+    "Change XELIS network.": "Ubah Jaringan XELIS.",
+    "Generate a new wallet seed.": "Hasilkan benih dompet baru.",
+    "Display the XEL amount on the wallet paper.": "Menampilkan jumlah XEL pada dompet kertas.",
+    "Change wallet background paper.": "Ubah latar belakang dompet kertas.",
+    "Print the wallet paper.": "Cetak dompet kertas."
+  },
   "italian": {
     "ADDRESS": "INDIRIZZO",
     "PRIVATE KEY": "CHIAVE PRIVATA",
