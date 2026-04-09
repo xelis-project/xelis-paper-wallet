@@ -33,9 +33,35 @@ async function load() {
   });
 
   generate_wallet();
+  fit_all_svg_text();
 }
 
 load();
+
+function fit_svg_text_to_width(target) {
+  const maxWidth = Number(target.getAttribute("data-fit-width"));
+  if (!Number.isFinite(maxWidth) || maxWidth <= 0) {
+    return;
+  }
+
+  const textElement = target.closest("text") || target;
+  const baseSize = Number(target.getAttribute("data-fit-base-size")) || parseFloat(window.getComputedStyle(textElement).fontSize) || 16;
+  const minSize = Number(target.getAttribute("data-fit-min-size")) || 8;
+
+  textElement.style.fontSize = `${baseSize}px`;
+  const contentWidth = target.getComputedTextLength();
+  if (!contentWidth || contentWidth <= maxWidth) {
+    return;
+  }
+
+  const scaledSize = Math.max(minSize, (baseSize * maxWidth) / contentWidth);
+  textElement.style.fontSize = `${scaledSize}px`;
+}
+
+function fit_all_svg_text() {
+  const textTargets = document.querySelectorAll("svg [data-fit-width]");
+  textTargets.forEach((target) => fit_svg_text_to_width(target));
+}
 
 function generate_wallet() {
   const network = select_network.value;
@@ -127,6 +153,8 @@ function translate_app(lang) {
     en_text = element.getAttribute('data-t-placeholder');
     if (en_text) element.placeholder = translate_text(en_text, lang);
   });
+
+  fit_all_svg_text();
 }
 
 select_language.addEventListener('change', (e) => {
