@@ -142,8 +142,8 @@ if (window.__TAURI__) {
   btn_download.classList.add("hidden");
 }
 
-function show_download_modal() {
-  modal_download.classList.remove("hidden");
+function on_download_button() {
+  window.open("https://github.com/xelis-project/xelis-paper-wallet/releases", "_blank");
 }
 
 // hide modal when click outside of .modal-content

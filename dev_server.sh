@@ -1,3 +1,3 @@
 #!/bin/bash
 
-live-server public --port=9966
+./build.sh && live-server public --port=9966

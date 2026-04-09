@@ -49,54 +49,12 @@
       </svg>
       <span data-t="Print">Print</span>
     </button>
-    <button id="btn_download" class="nav-btn" onclick="show_download_modal()">
+    <button id="btn_download" class="nav-btn" onclick="on_download_button()">
       <svg width="24" height="24">
         <use href="#download" />
       </svg>
-      <span>Download app</span>
+      <span data-t="Download App">Download App</span>
     </button>
-  </div>
-  <div id="modal_download" class="modal hidden">
-    <div class="modal-backdrop"></div>
-    <div class="modal-wrapper">
-      <div class="modal-h1">Executables - For offline use</div>
-      <div class="modal-content">
-        <div class="modal-div">
-          <div class="modal-h2">Windows</div>
-          <div class="modal-list">
-            <a class="btn" href="/executables/XELIS Paper Wallet_0.1.0_x64.exe">
-              <svg width="16px" height="16px">
-                <use href="#windows"></use>
-              </svg>
-              <span>XELIS Paper Wallet_0.1.0_x64.exe</span>
-            </a>
-            <a class="btn" href="/executables/XELIS Paper Wallet_0.1.0_x64_en-US.msi">
-              <svg width="16px" height="16px">
-                <use href="#windows"></use>
-              </svg>
-              <span>XELIS Paper Wallet_0.1.0_x64_en-US.msi</span></a>
-            <a class="btn" href="/executables/XELIS Paper Wallet_0.1.0_x64-setup.exe">
-              <svg width="16px" height="16px">
-                <use href="#windows"></use>
-              </svg>XELIS Paper
-              <span>Wallet_0.1.0_x64-setup.exe</span>
-            </a>
-          </div>
-        </div>
-        <div class="modal-div">
-          <div class="modal-h2">Linux</div>
-          <div class="modal-list">
-            TODO
-          </div>
-        </div>
-        <div class="modal-div">
-          <div class="modal-h2">MacOS</div>
-          <div class="modal-list">
-            TODO
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="wallet-paper">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
@@ -217,7 +175,7 @@
     </svg>
   </div>
   <div class="footer no-print">
-    <div data-t="XELIS © 2024 Copyright">XELIS © 2024 Copyright</div>
+    <div data-t="XELIS © 2026 Copyright">XELIS © 2026 Copyright</div>
     <div id="footer_msg">
       <span data-t="This program only makes a server request once, to obtain the program code and assets. The program operates without
       further server communication.">This program only makes a server request once, to obtain the program code and

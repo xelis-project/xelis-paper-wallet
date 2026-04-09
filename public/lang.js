@@ -37,9 +37,10 @@ const data = {
     "Generate a new wallet seed.": "Générer une nouvelle graine de portefeuille.",
     "Display the XEL amount on the wallet paper.": "Afficher le montant XEL sur le papier du portefeuille.",
     "Change wallet background paper.": "Changer le papier d'arrière-plan du portefeuille.",
-    "Print the wallet paper.": "Imprimer le papier du portefeuille."
+    "Print the wallet paper.": "Imprimer le papier du portefeuille.",
+    "Download App": "Télécharger l'application"
   },
-  "Bahasa Indonesia": {
+  "bahasa indonesia": {
     "ADDRESS": "Alamat",
     "PRIVATE KEY": "Kunci Pribadi",
     "Mainnet": "Mainnet",
@@ -57,7 +58,8 @@ const data = {
     "Generate a new wallet seed.": "Hasilkan benih dompet baru.",
     "Display the XEL amount on the wallet paper.": "Menampilkan jumlah XEL pada dompet kertas.",
     "Change wallet background paper.": "Ubah latar belakang dompet kertas.",
-    "Print the wallet paper.": "Cetak dompet kertas."
+    "Print the wallet paper.": "Cetak dompet kertas.",
+    "Download App": "Unduh Aplikasi"
   },
   "italian": {
     "ADDRESS": "INDIRIZZO",
@@ -77,7 +79,8 @@ const data = {
     "Generate a new wallet seed.": "Genera una nuova semenza del portafoglio.",
     "Display the XEL amount on the wallet paper.": "Mostra l'importo XEL sul paper del portafoglio.",
     "Change wallet background paper.": "Cambia il paper di sfondo del portafoglio.",
-    "Print the wallet paper.": "Stampa il paper del portafoglio."
+    "Print the wallet paper.": "Stampa il paper del portafoglio.",
+    "Download App": "Scarica l'app"
   },
   "spanish": {
     "ADDRESS": "DIRECCIÓN",
@@ -97,7 +100,8 @@ const data = {
     "Generate a new wallet seed.": "Generar una nueva semilla de billetera.",
     "Display the XEL amount on the wallet paper.": "Mostrar la cantidad de XEL en el papel de la billetera.",
     "Change wallet background paper.": "Cambiar el papel de fondo de la billetera.",
-    "Print the wallet paper.": "Imprimir el papel de la billetera."
+    "Print the wallet paper.": "Imprimir el papel de la billetera.",
+    "Download App": "Descargar aplicación"
   },
   "portuguese": {
     "ADDRESS": "ENDEREÇO",
@@ -117,7 +121,8 @@ const data = {
     "Generate a new wallet seed.": "Gerar uma nova semente de carteira.",
     "Display the XEL amount on the wallet paper.": "Exibir a quantidade XEL no papel da carteira.",
     "Change wallet background paper.": "Mudar o papel de fundo da carteira.",
-    "Print the wallet paper.": "Imprimir o papel da carteira."
+    "Print the wallet paper.": "Imprimir o papel da carteira.",
+    "Download App": "Baixar aplicativo"
   },
   "japanese": {
     "ADDRESS": "住所",
@@ -137,7 +142,8 @@ const data = {
     "Generate a new wallet seed.": "新しいウォレットシードを生成します。",
     "Display the XEL amount on the wallet paper.": "ウォレットペーパーにXELの金額を表示します。",
     "Change wallet background paper.": "ウォレットの背景紙を変更します。",
-    "Print the wallet paper.": "ウォレットペーパーを印刷します。"
+    "Print the wallet paper.": "ウォレットペーパーを印刷します。",
+    "Download App": "アプリをダウンロード"
   },
   "chinese simplified": {
     "ADDRESS": "地址",
@@ -157,7 +163,8 @@ const data = {
     "Generate a new wallet seed.": "生成新的钱包种子。",
     "Display the XEL amount on the wallet paper.": "在钱包纸上显示XEL金额。",
     "Change wallet background paper.": "更改钱包背景纸。",
-    "Print the wallet paper.": "打印钱包纸。"
+    "Print the wallet paper.": "打印钱包纸。",
+    "Download App": "下载应用程序"
   },
   "russian": {
     "ADDRESS": "АДРЕС",
@@ -177,7 +184,8 @@ const data = {
     "Generate a new wallet seed.": "Создать новое семя для кошелька.",
     "Display the XEL amount on the wallet paper.": "Отобразить сумму XEL на бумаге кошелька.",
     "Change wallet background paper.": "Изменить фон бумаги кошелька.",
-    "Print the wallet paper.": "Распечатать бумагу кошелька."
+    "Print the wallet paper.": "Распечатать бумагу кошелька.",
+    "Download App": "Скачать приложение"
   },
   "esperanto": {
     "ADDRESS": "ADRESO",
@@ -197,7 +205,8 @@ const data = {
     "Generate a new wallet seed.": "Generi novan semanton por la monujo.",
     "Display the XEL amount on the wallet paper.": "Montri la kvanton XEL sur la papero de la monujo.",
     "Change wallet background paper.": "Ŝanĝi la fonon de la papero de la monujo.",
-    "Print the wallet paper.": "Presi la paperon de la monujo."
+    "Print the wallet paper.": "Presi la paperon de la monujo.",
+    "Download App": "Elŝuti Aplikaĵon"
   },
   "dutch": {
     "ADDRESS": "ADRES",
@@ -217,7 +226,8 @@ const data = {
     "Generate a new wallet seed.": "Genereer een nieuwe portefeuillesem.",
     "Display the XEL amount on the wallet paper.": "Toon het XEL-bedrag op het portefeuillespapier.",
     "Change wallet background paper.": "Verander het achtergrondpapier van de portefeuille.",
-    "Print the wallet paper.": "Druk het portefeuillepapier af."
+    "Print the wallet paper.": "Druk het portefeuillepapier af.",
+    "Download App": "App downloaden"
   },
   "german": {
     "ADDRESS": "ADRESSE",
@@ -237,7 +247,8 @@ const data = {
     "Generate a new wallet seed.": "Erzeugen Sie einen neuen Wallet-Seed.",
     "Display the XEL amount on the wallet paper.": "Zeigen Sie den XEL-Betrag auf dem Wallet-Papier an.",
     "Change wallet background paper.": "Ändern Sie das Hintergrundpapier der Brieftasche.",
-    "Print the wallet paper.": "Drucken Sie das Brieftaschenpapier."
+    "Print the wallet paper.": "Drucken Sie das Brieftaschenpapier.",
+    "Download App": "App herunterladen"
   }
 };
 
